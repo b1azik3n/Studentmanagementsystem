@@ -1,0 +1,33 @@
+﻿@model List<Studentmanagementsystem.Models.Domain.Student>
+@{
+
+}
+<h1>Students</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Percentaage</th>
+            <th>DateofBirth</th>
+            <th>Department</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Percentage</td>
+                <td>@student.DateOfBirth</td>
+                <td>@student.Department</td>
+                <td><a href="StudentInformation/View/@student.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
